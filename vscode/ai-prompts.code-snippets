@@ -1,0 +1,93 @@
+{
+  "Debug PHP Deepseek": {
+    "prefix": "dbgphp",
+    "body": [
+      "[MODEL: Deepseek Debug]",
+      "[MODE: DEBUG]",
+      "",
+      "Tu es un expert PHP.",
+      "",
+      "Analyse uniquement, ne corrige pas.",
+      "",
+      "Erreur :",
+      "$1",
+      "",
+      "Code :",
+      "$2",
+      "",
+      "Objectif :",
+      "1. Diagnostic",
+      "2. Hypothèses",
+      "3. Niveau de certitude",
+      "4. Ce qu’il faut vérifier",
+      "",
+      "Contraintes :",
+      "- ne pas corriger",
+      "- ne pas inventer",
+      "- ne pas utiliser d’outil",
+      "- travailler uniquement avec le contexte fourni"
+    ],
+    "description": "Prompt Deepseek pour diagnostic PHP sans correction"
+  },
+
+  "Correction PHP Qwen": {
+    "prefix": "fixphp",
+    "body": [
+      "[MODEL: Qwen 30B Local]",
+      "[MODE: CORRECTION]",
+      "",
+      "À partir du diagnostic précédent et uniquement du code fourni :",
+      "",
+      "Propose une correction minimale.",
+      "",
+      "Contraintes :",
+      "- ne pas lire de fichier",
+      "- ne pas utiliser d’outil",
+      "- ne pas créer de nouveau fichier",
+      "- ne pas supposer de framework",
+      "- ne pas refactoriser",
+      "- fournir uniquement le code corrigé puis une explication courte"
+    ],
+    "description": "Prompt Qwen pour correction PHP minimale"
+  },
+
+  "Explication simple PHP": {
+    "prefix": "expphp",
+    "body": [
+      "[MODEL: Qwen Next Cloud]",
+      "[MODE: EXPLICATION]",
+      "",
+      "Explique cette erreur PHP comme si tu parlais à un débutant.",
+      "",
+      "Contraintes :",
+      "- simple",
+      "- concret",
+      "- pas de jargon inutile",
+      "- 5 lignes maximum",
+      "- exemple rapide si utile"
+    ],
+    "description": "Prompt Qwen Next pour explication débutant"
+  },
+
+  "Mode Agent Sécurisé": {
+    "prefix": "safeagent",
+    "body": [
+      "Mode agent sécurisé activé.",
+      "",
+      "Toujours :",
+      "1. Diagnostic",
+      "2. Vérification",
+      "3. Correction minimale",
+      "",
+      "Ne jamais :",
+      "- inventer",
+      "- refactoriser inutilement",
+      "- utiliser des fichiers non fournis",
+      "- utiliser le terminal sans demande explicite",
+      "- lire d’autres fichiers si le contexte suffit",
+      "",
+      "Travaille uniquement avec le contexte fourni."
+    ],
+    "description": "Mode agent sécurisé strict"
+  }
+}
