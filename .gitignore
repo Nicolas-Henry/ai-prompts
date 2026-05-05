@@ -1,0 +1,8 @@
+# Fichiers locaux éventuels
+.env
+.DS_Store
+Thumbs.db
+
+# Dossiers temporaires
+tmp/
+temp/
